@@ -1,34 +1,16 @@
 body {
     font-family: Arial, sans-serif;
+    background: #161618;
     margin: 0;
-    background: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    background: #222;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-nav {
-    background: #444;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
+.corpo-da-pagina {
+    max-width: 80%;
+    margin-left: 20%;
+    padding-left: 3rem;
+    padding-top: 1rem;
 }
 
 .games {
