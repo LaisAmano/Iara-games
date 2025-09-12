@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
     background: #161618;
     margin: 0;
     padding: 0;
@@ -9,52 +9,125 @@ body {
 .corpo-da-pagina {
     max-width: 80%;
     margin-left: 20%;
-    padding-left: 3rem;
-    padding-top: 1rem;
+    padding-left: 6rem;
+    padding-top: 2rem;
 }
 
-.games {
+.h2-titulo-home {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #fafafa;
+}
+
+.destaque-amarelo {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: rgba(253, 231, 96, 1);
+}
+
+.p-home {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.img-card {
+    width: 15.5rem;
+    height: 15.3rem;
+    transform: rotate(0deg);
+    opacity: 1;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    position: absolute;
+    z-index: 1
+}
+
+.section-game-cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
-.game-card {
-    background: #eee;
-    border-radius: 6px;
-    padding: 15px;
-    width: 200px;
+.game-card1 {
+    width: 15.6rem;
+    height: 15.4rem;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    border: 2px solid var(--color-blue-sky, rgba(79, 126, 246, 1));
+}
+
+.game-card2 {
+    width: 15.6rem;
+    height: 15.4rem;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    border: 2px solid var(----color-yellow-br, rgba(253, 231, 96, 1))
+}
+
+.game-card3 {
+    width: 15.6rem;
+    height: 15.4rem;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    border: 2px solid var(----color-green-br, rgba(79, 198, 122, 1))
+}
+
+.sombra {
+    display: block;
+    width: 15.6rem;
+    height: 15.4rem;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgba(79, 126, 246, 0.9) 100%);
+    z-index: 2;
+    position: relative;
+}
+
+.sombra2 {
+    display: block;
+    width: 15.6rem;
+    height: 15.4rem;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgba(253, 231, 96, 0.9) 100%);
+    z-index: 2;
+    position: relative;
+}
+
+.sombra3 {
+    display: block;
+    width: 15.6rem;
+    height: 15.4rem;
+    border-radius: 0.625rem;
+    border-width: 0.125rem;
+    background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgba(79, 198, 122, 0.9) 100%);
+    z-index: 2;
+    position: relative;
+}
+
+.titulo-lista-jogos {
+    position: absolute;
+    z-index: 3;
+    font-size: 1.2rem;
+    color: #161618;
     text-align: center;
-    box-shadow: 0 2px 6px #0001;
-}
-
-.game-card img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.game-card h3 {
-    margin: 10px 0 5px;
-}
-
-.game-card button {
-    background: #222;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.game-card button:hover {
-    background: #0077cc;
-}
-
-footer {
-    background: #222;
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    margin-top: 13rem;
+    margin-left: 1rem;
 }
