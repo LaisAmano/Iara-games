@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Iara Games - Loja de Jogos Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
+    <script src="./js/topbar.js" defer></script>
+    <script src="./js/sidebar.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <h1>Iara Games</h1>
-    </header>
+    <script>
+        sidebar();
+    </script>
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Jogos</a>
-        <a href="#">Contato</a>
-    </nav>
+    <section class="corpo-da-pagina">
+        <script>
+            topbar();
+        </script>
 
-    <div class="container">
-        <h2>Grandes categorias Brasileiras</h2>
-        
-        <div class="games">
-            <div class="game-card">
-                <img src="https://via.placeholder.com/200x250?text=Jogo+1" alt="Jogo 1">
-                <h3>Jogo Aventura</h3>
-                <p>R$ 99,90</p>
-                <button>Comprar</button>
+        <h2 class="h2-titulo-home">JOGOS <span class="destaque-amarelo">brasileiros</span> EM DESTAQUE!</h2>
+
+        <h2 class="h2-titulo-home">grandes categorias <span class="destaque-amarelo">brasileiras</span>!</h2>
+        <p class="p-home">Conheça também algumas categorias de jogos famosos:</p>
+        <section class="section-game-cards">
+            <div class="game-card1">
+                <img class="img-card" src="./img/categoria1.png" alt="imagem da categoria ação e aventura">
+                <h3 class="titulo-lista-jogos">AÇÃO E AVENTURA</h3>
+                <span class="sombra"></span>
             </div>
-            <div class="game-card">
-                <img src="https://via.placeholder.com/200x250?text=Jogo+2" alt="Jogo 2">
-                <h3>Corrida Extrema</h3>
-                <p>R$ 79,90</p>
-                <button>Comprar</button>
+            <div class="game-card2">
+                <img class="img-card" src="./img/categoria2.png" alt="imagem da categoria rpg e estratégia">
+                <h3 class="titulo-lista-jogos">RPG E ESTRATÉGIA</h3>
+                <span class="sombra2"></span>
             </div>
-            <div class="game-card">
-                <img src="https://via.placeholder.com/200x250?text=Jogo+3" alt="Jogo 3">
-                <h3>Quebra-Cabeça Pro</h3>
-                <p>R$ 59,90</p>
-                <button>Comprar</button>
+            <div class="game-card3">
+                <img class="img-card" src="./img/categoria3.png" alt="imagem da categoria esportes e simulação">
+                <h3 class="titulo-lista-jogos">ESPORTES E SIMULAÇÃO</h3>
+                <span class="sombra3"></span>
             </div>
-        </div>
-    </div>
-    <footer>
-        &copy; 2024 Iara Games. Todos os direitos reservados.
-    </footer>
+    </section>
+
 </body>
+
 </html>
