@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -18,14 +17,15 @@
 </head>
 
 <body>
-    <script>
-        sidebar();
-    </script>
-
-    <section class="corpo-da-pagina">
+    <main>
         <script>
-            topbar();
+            sidebar();
         </script>
+
+        <section class="corpo-da-pagina">
+            <script>
+                topbar();
+            </script>
 
         <h2 class="h2-titulo-home">JOGOS <span class="destaque-amarelo">brasileiros</span> EM DESTAQUE!</h2>
         <div class="swiper">
@@ -60,26 +60,27 @@
             <div class="swiper-scrollbar"></div>
         </div>
 
-        <h2 class="h2-titulo-home">grandes categorias <span class="destaque-amarelo">brasileiras</span>!</h2>
-        <p class="p-home">Conheça também algumas categorias de jogos famosos:</p>
-        <section class="section-game-cards">
-            <div class="game-card1">
-                <img class="img-card" src="./img/categoria1.png" alt="imagem da categoria ação e aventura">
-                <h3 class="titulo-lista-jogos1">AÇÃO E AVENTURA</h3>
-                <span class="sombra"></span>
-            </div>
-            <div class="game-card2">
-                <img class="img-card" src="./img/categoria2.png" alt="imagem da categoria rpg e estratégia">
-                <h3 class="titulo-lista-jogos2">RPG E ESTRATÉGIA</h3>
-                <span class="sombra2"></span>
-            </div>
-            <div class="game-card3">
-                <img class="img-card" src="./img/categoria3.png" alt="imagem da categoria esportes e simulação">
-                <h3 class="titulo-lista-jogos3">ESPORTES E SIMULAÇÃO</h3>
-                <span class="sombra3"></span>
-            </div>
+            <h2 class="h2-titulo-home">grandes categorias <span class="destaque-amarelo">brasileiras</span>!</h2>
+            <p class="p-home">Conheça também algumas categorias de jogos famosos:</p>
+            <section class="section-game-cards">
+                <div class="game-card1">
+                    <img class="img-card" src="./img/categoria1.png" alt="imagem da categoria ação e aventura">
+                    <h3 class="titulo-lista-jogos">AÇÃO E AVENTURA</h3>
+                    <span class="sombra"></span>
+                </div>
+                <div class="game-card2">
+                    <img class="img-card" src="./img/categoria2.png" alt="imagem da categoria rpg e estratégia">
+                    <h3 class="titulo-lista-jogos">RPG E ESTRATÉGIA</h3>
+                    <span class="sombra2"></span>
+                </div>
+                <div class="game-card3">
+                    <img class="img-card" src="./img/categoria3.png" alt="imagem da categoria esportes e simulação">
+                    <h3 class="titulo-lista-jogos">ESPORTES E SIMULAÇÃO</h3>
+                    <span class="sombra3"></span>
+                </div>
+            </section>
         </section>
-
+    </main>
 </body>
 
 </html>
