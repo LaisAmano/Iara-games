@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js" defer></script>
     <script src="./js/topbar.js" defer></script>
     <script src="./js/sidebar.js" defer></script>
 </head>
@@ -25,26 +28,57 @@
         </script>
 
         <h2 class="h2-titulo-home">JOGOS <span class="destaque-amarelo">brasileiros</span> EM DESTAQUE!</h2>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="imagem-1">
+                    <img class="slide1-img1" src="./img/slide1-img1.jpg" alt="Slide 1">
+                    </div>
+
+                    <div class="imagens-2-3">
+                        <img class="slide1-img2" src="./img/slide1-img2.png" alt="Slide 2">
+                        <img class="slide1-img3" src="./img/slide1-img3.png" alt="Slide 3">
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="imagem-2">
+                        <img src="./img/slide2.jpg" alt="Slide 2">
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
 
         <h2 class="h2-titulo-home">grandes categorias <span class="destaque-amarelo">brasileiras</span>!</h2>
         <p class="p-home">Conheça também algumas categorias de jogos famosos:</p>
         <section class="section-game-cards">
             <div class="game-card1">
                 <img class="img-card" src="./img/categoria1.png" alt="imagem da categoria ação e aventura">
-                <h3 class="titulo-lista-jogos">AÇÃO E AVENTURA</h3>
+                <h3 class="titulo-lista-jogos1">AÇÃO E AVENTURA</h3>
                 <span class="sombra"></span>
             </div>
             <div class="game-card2">
                 <img class="img-card" src="./img/categoria2.png" alt="imagem da categoria rpg e estratégia">
-                <h3 class="titulo-lista-jogos">RPG E ESTRATÉGIA</h3>
+                <h3 class="titulo-lista-jogos2">RPG E ESTRATÉGIA</h3>
                 <span class="sombra2"></span>
             </div>
             <div class="game-card3">
                 <img class="img-card" src="./img/categoria3.png" alt="imagem da categoria esportes e simulação">
-                <h3 class="titulo-lista-jogos">ESPORTES E SIMULAÇÃO</h3>
+                <h3 class="titulo-lista-jogos3">ESPORTES E SIMULAÇÃO</h3>
                 <span class="sombra3"></span>
             </div>
-    </section>
+        </section>
 
 </body>
 
