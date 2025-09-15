@@ -1,8 +1,19 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.main>div {
+    flex: 0 0 250px;
+}
+
 .grid {
+    flex: 1;
     display: flex;
     justify-content: center;
     gap: 32px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .col {
