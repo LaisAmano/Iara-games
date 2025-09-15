@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #161618;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Títulos com Montserrat */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --color-bg: var(#171718);
+    --color-blue-sky: var(#4F7EF6);
+    --color-yellow-br: var(#F6E15E);
+    --color-text: var(#FAFAFA);
+    --color-green-br: var(#4FC67A);
+}
