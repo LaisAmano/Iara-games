@@ -23,10 +23,14 @@ h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
+p {
+    font-size: 16px;
+}
+
 :root {
-    --color-bg: var(#171718);
-    --color-blue-sky: var(#4F7EF6);
-    --color-yellow-br: var(#F6E15E);
-    --color-text: var(#FAFAFA);
-    --color-green-br: var(#4FC67A);
+    --color-bg: #171718;
+    --color-blue-sky: #4F7EF6;
+    --color-yellow-br: #F6E15E;
+    --color-green-br: #4FC67A;
+    --color-text: #FAFAFA;
 }

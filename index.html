@@ -5,48 +5,173 @@
     <meta charset="UTF-8">
     <title>Iara Games - Loja de Jogos Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js" defer></script>
     <script src="./js/topbar.js" defer></script>
     <script src="./js/sidebar.js" defer></script>
 </head>
 
 <body>
     <main>
-        <script>
-            sidebar();
-        </script>
+        <script>sidebar();</script>
 
         <section class="corpo-da-pagina">
-            <script>
-                topbar();
-            </script>
+            <script>topbar();</script>
 
-            <h2 class="h2-titulo-home">JOGOS <span class="destaque-amarelo">brasileiros</span> EM DESTAQUE!</h2>
+            <!-- Destaque de Jogos -->
+            <section aria-labelledby="destaque-jogos">
+                <h2 id="destaque-jogos" class="h2-titulo-home">
+                    JOGOS <span class="destaque-amarelo">brasileiros</span> EM DESTAQUE!
+                </h2>
 
-            <h2 class="h2-titulo-home">grandes categorias <span class="destaque-amarelo">brasileiras</span>!</h2>
-            <p class="p-home">Conheça também algumas categorias de jogos famosos:</p>
-            <section class="section-game-cards">
-                <div class="game-card1">
-                    <img class="img-card" src="./img/categoria1.png" alt="imagem da categoria ação e aventura">
-                    <h3 class="titulo-lista-jogos">AÇÃO E AVENTURA</h3>
-                    <span class="sombra"></span>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <article class="swiper-slide">
+                            <figure class="imagem-1 borda-azul">
+                                <img src="./img/slide1-img1.jpg" alt="Capa do jogo Dandara">
+                                <figcaption class="banner-info">
+                                    <h3 class="banner-title">Dandara: Trials of Fear Edition</h3>
+                                    <p class="banner-desc">Jogo de ação e plataforma estilo metroidvania, desenvolvido
+                                        em Belo Horizonte.</p>
+                                    <a href="/jogo.html" class="banner-btn">Conheça mais</a>
+                                </figcaption>
+                            </figure>
+
+                            <div class="coluna-direita">
+                                <figure class="imagem-3 borda-verde">
+                                    <img src="./img/slide1-img3.png" alt="Capa do jogo 171">
+                                    <figcaption class="banner-info">
+                                        <h3 class="banner-title">171</h3>
+                                        <p class="banner-desc">Jogo de mundo aberto com ambientação inspirada no Brasil.
+                                        </p>
+                                        <a href="/jogo3.html" class="banner-btn">Conheça mais</a>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="imagem-2 borda-amarela">
+                                    <img src="./img/slide1-img2.png" alt="Capa do jogo Impunes">
+                                    <figcaption class="banner-info">
+                                        <h3 class="banner-title">Impunes</h3>
+                                        <p class="banner-desc">Jogo sandbox roleplay ambientado no Brasil.</p>
+                                        <a href="/jogo2.html" class="banner-btn">Conheça mais</a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
+
+                        <!-- Slide 2 -->
+                        <article class="swiper-slide">
+                            <figure class="imagem-1 borda-azul">
+                                <img src="./img/slide2-img1.png" alt="Capa do jogo Colina Legacy">
+                                <figcaption class="banner-info">
+                                    <h3 class="banner-title">Colina Legacy</h3>
+                                    <p class="banner-desc">Jogo brasileiro de terror inspirado em Resident Evil e Silent
+                                        Hill.</p>
+                                    <a href="/jogo4.html" class="banner-btn">Conheça mais</a>
+                                </figcaption>
+                            </figure>
+
+                            <div class="coluna-direita">
+                                <figure class="imagem-3 borda-verde">
+                                    <img src="./img/slide2-img3.jpg" alt="Capa do jogo Pesadelo">
+                                    <figcaption class="banner-info">
+                                        <h3 class="banner-title">Pesadelo</h3>
+                                        <p class="banner-desc">Jogo de terror psicológico que explora os limites da
+                                            mente.</p>
+                                        <a href="/jogo6.html" class="banner-btn">Conheça mais</a>
+                                    </figcaption>
+                                </figure>
+
+                                <figure class="imagem-2 borda-amarela">
+                                    <img src="./img/slide2-img2.jpg" alt="Capa do jogo Damned 2">
+                                    <figcaption class="banner-info">
+                                        <h3 class="banner-title">Damned 2</h3>
+                                        <p class="banner-desc">Multiplayer de terror assimétrico com sobrevivência
+                                            intensa.</p>
+                                        <a href="/jogo5.html" class="banner-btn">Conheça mais</a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Navegação Swiper -->
+                    <button class="swiper-button-prev" aria-label="Slide anterior"></button>
+                    <button class="swiper-button-next" aria-label="Próximo slide"></button>
                 </div>
-                <div class="game-card2">
-                    <img class="img-card" src="./img/categoria2.png" alt="imagem da categoria rpg e estratégia">
-                    <h3 class="titulo-lista-jogos">RPG E ESTRATÉGIA</h3>
-                    <span class="sombra2"></span>
+            </section>
+
+            <!-- Categorias -->
+            <section aria-labelledby="categorias-jogos">
+                <h2 id="categorias-jogos" class="h2-titulo-home">
+                    grandes categorias <span class="destaque-amarelo">brasileiras</span>!
+                </h2>
+                <p class="p-home">Conheça também algumas categorias de jogos famosos:</p>
+
+                <div class="section-game-cards">
+                    <article class="game-card1">
+                        <img class="img-card" src="./img/categoria1.png" alt="Categoria Ação e Aventura">
+                        <h3 class="titulo-lista-jogos1">AÇÃO E AVENTURA</h3>
+                        <span class="sombra"></span>
+                    </article>
+
+                    <article class="game-card2">
+                        <img class="img-card" src="./img/categoria2.png" alt="Categoria RPG e Estratégia">
+                        <h3 class="titulo-lista-jogos2">RPG E ESTRATÉGIA</h3>
+                        <span class="sombra2"></span>
+                    </article>
+
+                    <article class="game-card3">
+                        <img class="img-card" src="./img/categoria3.png" alt="Categoria Esportes e Simulação">
+                        <h3 class="titulo-lista-jogos3">ESPORTES E SIMULAÇÃO</h3>
+                        <span class="sombra3"></span>
+                    </article>
                 </div>
-                <div class="game-card3">
-                    <img class="img-card" src="./img/categoria3.png" alt="imagem da categoria esportes e simulação">
-                    <h3 class="titulo-lista-jogos">ESPORTES E SIMULAÇÃO</h3>
-                    <span class="sombra3"></span>
-                </div>
+            </section>
+
+            <!-- Loja de Jogos -->
+            <section aria-labelledby="loja-jogos">
+                <h2 id="loja-jogos" class="h2-titulo-home">
+                    jogos <span class="destaque-amarelo">brasileiros</span> para você!
+                </h2>
+                <p class="p-home">Veja alguns jogos brasileiros que você pode gostar:</p>
+
+                <ul class="games-list">
+                    <li class="game-card card-azul">
+                        <img src="./img/slide2-img1.png" alt="Capa do jogo Colina Legacy" class="game-img">
+                        <h3 class="game-title">Colina Legacy</h3>
+                        <p class="game-price">R$ 49,90</p>
+                        <p class="game-desc">Terror psicológico que explora os limites da mente humana.</p>
+                        <button class="game-btn">Comprar</button>
+                    </li>
+
+                    <li class="game-card card-amarelo">
+                        <img src="./img/slide2-img2.jpg" alt="Capa do jogo Damned 2" class="game-img">
+                        <h3 class="game-title">Damned 2</h3>
+                        <p class="game-price">R$ 59,90</p>
+                        <p class="game-desc">Multiplayer de terror assimétrico com monstro implacável.</p>
+                        <button class="game-btn">Comprar</button>
+                    </li>
+
+                    <li class="game-card card-verde">
+                        <img src="./img/slide2-img3.jpg" alt="Capa do jogo Pesadelo Regressão" class="game-img">
+                        <h3 class="game-title">Pesadelo: Regressão</h3>
+                        <p class="game-price">R$ 39,90</p>
+                        <p class="game-desc">Terror psicológico com pesadelos e alucinações.</p>
+                        <button class="game-btn">Comprar</button>
+                    </li>
+                </ul>
             </section>
         </section>
     </main>
+
 </body>
 
 </html>

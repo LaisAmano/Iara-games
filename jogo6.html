@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesadelo Regressão</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/jogo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <script src="./js/galeria.js" defer></script>
+    <script src="./js/topbar.js" defer></script>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+</head>
+
+<body>
+    <script>
+        sidebar();
+    </script>
+
+    <section class="corpo-da-pagina">
+        <script>
+            topbar();
+        </script>
+
+        <div class="container">
+            <div class="item">
+                <h2>Pesadelo Regressão</h2>
+                <img src="./img/Pesadelo Regressão_capa.jpg" alt="Pesadelo Regressão" class="img1">
+            </div>
+
+            <div class="item">
+                <h2>Desenvolvedores</h2>
+                <img src="./img/Desenvolvedores_Pesadelo Regressão.jpg" alt="Desenvolvedores Skyjaz Games" class="img2">
+            </div>
+        </div>
+
+        <section class="sobre-jogo">
+            <h3>sobre</h3>
+
+            <p>Pesadelo é um jogo brasileiro de terror psicológico em primeira pessoa, reconhecido como um dos pioneiros
+                do
+                gênero no cenário nacional. Desenvolvido de forma independente, o título mergulha o jogador em ambientes
+                sombrios e opressivos, onde a sobrevivência depende da resolução de enigmas, da exploração cautelosa e
+                da
+                capacidade de manter a calma diante de ameaças sobrenaturais.
+                <br><br>
+
+                A proposta gira em torno da tensão constante e do medo do desconhecido, utilizando recursos como trilha
+                sonora inquietante, sustos imprevisíveis e atmosfera claustrofóbica para criar uma experiência imersiva.
+                O
+                jogador deve evitar criaturas aterrorizantes e buscar respostas enquanto é desafiado por puzzles que
+                ampliam
+                a narrativa fragmentada e misteriosa.
+                <br><br>
+
+                Pesadelo se consolidou como uma referência no horror indie brasileiro, e demonstra o potencial criativo
+                dos
+                desenvolvedores nacionais em entregar experiências envolventes com temas universais do medo humano.
+            </p>
+        </section>
+
+        <section class="corpo-galeria" id="galeria-container" data-galeria="pesadeloRegressao">
+            <h2 id="galeria-titulo">Galeria:</h2>
+
+            <div class="galeria-navegacao" id="galeria-navegacao">
+                <button id="btn-prev" aria-label="Imagem anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="galeria-grid" id="galeria"></div>
+
+                <button id="btn-next" aria-label="Próxima imagem">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>

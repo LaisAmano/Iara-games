@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>171</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/jogo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <script src="./js/galeria.js" defer></script>
+    <script src="./js/topbar.js" defer></script>
+    <script src="./js/sidebar.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+</head>
+
+<body>
+
+    <script>
+        sidebar();
+    </script>
+    <section class="corpo-da-pagina">
+        <script>
+            topbar();
+        </script>
+
+        <div class="container">
+            <div class="item">
+                <h2>171</h2>
+                <img src="./img/171_capa.jpg" alt="171" class="img1">
+            </div>
+
+            <div class="item">
+                <h2>Desenvolvedores</h2>
+                <img src="./img/Desenvolvedores_171.jpg" alt="Desenvolvedores Betagames Group" class="img2">
+            </div>
+        </div>
+
+        <section class="sobre-jogo">
+            <h3>sobre</h3>
+
+            <p>171 é um jogo brasileiro de ação e aventura em mundo aberto, desenvolvido pelo estúdio Betagames Group.
+                Inspirado por clássicos do gênero como Grand Theft Auto, o jogo é ambientado em uma cidade fictícia
+                fortemente baseada no cotidiano urbano brasileiro, com ruas, veículos, arquitetura e personagens que
+                refletem a realidade social, cultural e estética do país.
+                <br><br>
+                O jogador assume o papel de um cidadão inserido em um ambiente repleto de escolhas morais, podendo
+                explorar
+                livremente o mapa, conduzir veículos, interagir com NPCs, realizar missões diversas e optar entre seguir
+                a
+                legalidade ou mergulhar no mundo do crime. A narrativa e os elementos de gameplay são moldados por essas
+                decisões, promovendo múltiplos desdobramentos dentro da experiência.
+                <br><br>
+                O destaque de 171 está na sua autenticidade cultural, com gírias, trilha sonora, ambientes e situações
+                inspirados no Brasil contemporâneo, oferecendo uma representação única e local do gênero sandbox.
+            </p>
+        </section>
+        <section class="corpo-galeria" id="galeria-container" data-galeria="umSeteUm">
+            <h2 id="galeria-titulo">Galeria:</h2>
+
+            <div class="galeria-navegacao" id="galeria-navegacao">
+                <button id="btn-prev" aria-label="Imagem anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="galeria-grid" id="galeria"></div>
+
+                <button id="btn-next" aria-label="Próxima imagem">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
