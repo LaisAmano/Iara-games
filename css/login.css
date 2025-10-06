@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #0f0f0f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 30px;
+}
+
+.borda {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    position: relative;
+
+    background-image: linear-gradient(135deg, #161618),
+        linear-gradient(135deg,
+            var(--color-blue-sky),
+            var(--color-green-br),
+            var(--color-yellow-br));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    width: 500px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.logo {
+    width: 80px;
+}
+
+.text-box {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 25px;
+}
+
+.text-box p {
+    font-size: 16px;
+}
+
+label {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    font-size: 15px;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100%; 
+    padding: 12px;
+    background-color: var(--color-blue-sky);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif; 
+}
+
+.btn:hover {
+    background-color: #3d47e0;
+}
+
+.texto-nao-tem-login{
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.texto-nao-tem-login a{
+    text-decoration: none;
+    color: var(--color-green-br);
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .borda {
+        width: 100%;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container h1 {
+        font-size: 20px;
+    }
+
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input {
+        height: 36px;
+        padding: 0 16px;
+        font-size: 14px;
+    }
+
+    input::placeholder {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn a {
+        font-size: 14px;
+    }
+}

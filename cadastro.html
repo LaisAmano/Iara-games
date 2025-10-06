@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iara Games - Loja de Jogos Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="borda">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="img/logotipo-Iara-Games.png" alt="Iara Games Logo" class="logo" />
+                    <h1>Iara Games</h1>
+                </div>
+
+                <div class="text-box">
+                    <h1>SEJA BEM VINDO!</h1>
+                    <p>FAÇA SEU CADASTRO PARA CONTINUAR:</p>
+                </div>
+
+                <form class="form-box">
+                    <label for="nome">NOME</label>
+                    <input type="text" id="nome" placeholder="DIGITE SEU NOME" required />
+
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" placeholder="EXAMPLE@HOTMAIL.COM" required />
+
+                    <label for="senha">SENHA</label>
+                    <input type="password" id="senha" placeholder="DIGITE SUA SENHA" required />
+
+                    <button type="submit" class="btn">CONTINUAR</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+  const form = document.querySelector('.form-box');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault(); // impede envio automático
+
+    if (form.checkValidity()) {
+      window.location.href = '/login.html'; // redireciona se estiver tudo ok
+    } else {
+      form.reportValidity(); // mostra os erros se existirem
+    }
+  });
+</script>
