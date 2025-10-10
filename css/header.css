@@ -1,16 +1,22 @@
-/* header da parte da sidebar -------------------*/
+/* sidebar wrapper */
 .border-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     z-index: 0;
+    width: 250px;
+    /* largura fixa da sidebar em desktop */
+    background: #111;
+    /* cor de fundo provisória */
 }
 
-header {
+/* dentro da sidebar */
+.border-wrapper header {
     position: relative;
+    width: 100%;
     height: 100%;
-    padding: 50px;
+    padding: 2rem;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -18,13 +24,13 @@ header {
     z-index: 1;
 }
 
-header::before {
+.border-wrapper header::before {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
     padding: 2px;
     background: linear-gradient(180deg, #4F7EF6 0%, #4FC67A 50%, #FDE760 100%);
     -webkit-mask:
@@ -40,13 +46,11 @@ header::before {
     pointer-events: none;
 }
 
-
-
 .logotipo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-left: 1rem;
+    padding-bottom: 2rem;
 }
 
 .logotipo-header {
@@ -55,28 +59,26 @@ header::before {
 
 .logotipo-header-titulo {
     font-family: Montserrat, sans-serif;
-    display: flex;
-    justify-content: center;
     font-weight: 400;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
     text-align: left;
 }
 
 .lista-sidebar {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    padding: 10%;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 .lista-header {
     display: flex;
-    justify-content: center;
-    font-size: 20px;
-    text-transform: uppercase;
+    align-items: center;
+    font-size: 1rem;
     list-style: none;
-    margin: 2rem 0;
-    text-align: left;
+    gap: 0.7rem;
 }
 
 .icone-header {
@@ -84,35 +86,38 @@ header::before {
     margin-right: 0.5rem;
 }
 
-nav {
-    height: 100%;
-    padding: 0.5rem 0;
-    text-align: left;
-}
-
-nav a {
+.lista-header a {
     color: #fff;
-    margin: 0 15px;
     text-decoration: none;
 }
 
-/* header da parte do corpo -------------------*/
+/* contêiner principal ao lado da sidebar */
+.conteudo-principal {
+    margin-left: 250px;
+    /* deixa espaço para sidebar */
+    padding: 1rem;
+}
+
+/* top bar / header secundário dentro do conteúdo */
 .header-secundario {
     display: flex;
-    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
 }
 
 .barra-de-busca {
     display: flex;
     width: 50%;
-    height: 42px;
+    height: 2.625rem;
     align-items: center;
-    border-radius: 5px;
-    padding: 5px 10px;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 0.625rem;
     background-color: #FAFAFA;
     transition: border 0.3s;
     border: 2px solid #007BFF;
-    margin-right: 30%;
+    margin-right: 1rem;
 }
 
 .barra-de-busca:focus-within {
@@ -123,9 +128,9 @@ nav a {
 .espaco-pesquisar {
     border: none;
     outline: none;
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 25px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 1.5625rem;
     flex: 1;
     background-color: transparent;
 }
@@ -136,14 +141,15 @@ nav a {
 }
 
 .botao-pesquisar {
-    position: absolute;
-    margin-left: 40%;
+    position: relative;
+    /* agora relativa, não absoluta */
+    margin: 0;
     background-color: #007BFF;
     border: none;
     color: white;
-    padding: 8px 16px;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -152,8 +158,242 @@ nav a {
     background-color: #014b99;
 }
 
+.user-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.user-nome {
+    font-size: 1rem;
+}
+
 .user-icon {
     width: 2rem;
     height: 2rem;
     filter: invert(1);
+}
+
+/* =========================== */
+/* media queries para responsividade */
+/* =========================== */
+
+/* até tablets / médio */
+@media (max-width: 1920px) {
+    .vs-desktop {
+        display: inline;
+    }
+
+    .vs-mobile {
+        display: none;
+        width: 100%;
+        position: ;
+        background-color: #111;
+    }
+
+    .btn-hamburger {
+        display: none;
+    }
+
+    /* conteúdo principal ocupa toda a largura quando menu escondido */
+    .conteudo-principal {
+        margin-left: 0 !important;
+    }
+
+    .border-wrapper {
+        width: 220px;
+    }
+
+    .conteudo-principal {
+        margin-left: 220px;
+    }
+
+    .barra-de-busca {
+        width: 60%;
+    }
+}
+
+/* mobile — até 768px */
+@media (max-width: 768px) {
+    .vs-desktop {
+        display: none;
+    }
+
+    .vs-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .btn-hamburger {
+        display: block;
+        position: fixed;
+        top: 1.5rem;
+        left: 1.75rem;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .linha {
+        display: block;
+        width: 1.5rem;
+        height: 0.2rem;
+        background-color: #fff;
+        margin: 0.3rem 0;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 70%;
+        max-width: 300px;
+        background: #111;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+    .logotipo{
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .logotipo-header-titulo {
+        font-size: 1rem;
+    }
+
+    .logotipo-header {
+        width: 2.5rem;
+    }
+    .border-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+    }
+
+    .header-secundario {
+        align-items: stretch;
+        justify-content: center;
+        width: 90%;
+        margin-left: 10%;
+        gap: 1.rem;
+    }
+
+    .barra-de-busca {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .botao-pesquisar {
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+
+    .user-link {
+        justify-content: center;
+    }
+}
+
+/* mobile pequeno — até 480px */
+@media (max-width: 480px) {
+    .btn-hamburger {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .linha {
+        display: block;
+        width: 1.5rem;
+        height: 0.2rem;
+        background-color: #fff;
+        margin: 0.3rem 0;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+
+    #sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 70%;
+        max-width: 300px;
+        background: #111;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+    }
+
+
+    .logotipo{
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    .logotipo-header-titulo {
+        font-size: 1rem;
+    }
+
+    .logotipo-header {
+        width: 2.5rem;
+    }
+
+    .vs-desktop {
+        display: none;
+    }
+
+    .vs-mobile {
+        display: inline;
+    }
+
+    .header-secundario {
+        width: 80%;
+        margin-left: 20%;
+    }
+
+    .barra-de-busca {
+        width: 80%;
+        height: 2rem;
+    }
+
+    .espaco-pesquisar {
+        font-size: 0.85rem;
+    }
+
+    .icone-lupa {
+        width: 1.2rem;
+        margin-left: 0.2rem;
+    }
+
+    .botao-pesquisar {
+        max-width: 160px;
+        font-size: 0.9rem;
+    }
+
+    .user-nome {
+        font-size: 0.9rem;
+    }
+
+    .user-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }

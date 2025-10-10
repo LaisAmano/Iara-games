@@ -1,6 +1,6 @@
 .corpo-da-pagina {
-    max-width: 80%;
-    margin-left: 20%;
+    width: 80%;
+    margin-left: 16%;
     padding-left: 6rem;
     padding-top: 2rem;
 }
@@ -85,7 +85,6 @@
     content: "";
     position: absolute;
     inset: 3px;
-    /* deixa a borda visível */
     background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     pointer-events: none;
     border-radius: 7px;
@@ -257,12 +256,12 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  background: transparent !important; 
-  color: #fff !important;
-  border: none;                
-  padding: 0;                     
-  box-shadow: none !important;     
-  backdrop-filter: none; 
+    background: transparent !important;
+    color: #fff !important;
+    border: none;
+    padding: 0;
+    box-shadow: none !important;
+    backdrop-filter: none;
 }
 
 /* =============== */
@@ -350,4 +349,65 @@
 
 .game-btn:hover {
     background: #3264dc;
+}
+
+@media (max-width: 992px) {
+
+    .corpo-da-pagina {
+        width: 100%;
+    }
+
+    .games-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .corpo-da-pagina {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .h2-titulo-home {
+        margin-top: 2rem;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .destaque-amarelo {
+        font-size: 20px;
+    }
+
+    .banner-info {
+        display: none;
+    }
+
+    .swiper-slide {
+        flex-direction: column;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .games-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-game-cards {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .game-card1,
+    .game-card2,
+    .game-card3 {
+        width: 100%;
+    }
 }

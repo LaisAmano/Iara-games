@@ -13,10 +13,12 @@
     <main>
         <div class="borda">
             <div class="container">
-                <div class="logo-container">
-                    <img src="img/logotipo-Iara-Games.png" alt="Iara Games Logo" class="logo" />
-                    <h1>Iara Games</h1>
-                </div>
+                <a href="./index.html">
+                    <div class="logo-container">
+                        <img src="img/logotipo-Iara-Games.png" alt="Iara Games Logo" class="logo" />
+                        <h1>Iara Games</h1>
+                    </div>
+                </a>
 
                 <div class="text-box">
                     <h1>SEJA BEM VINDO!</h1>
@@ -43,15 +45,15 @@
 </body>
 
 <script>
-  const form = document.querySelector('.form-box');
+    const form = document.querySelector('.form-box');
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // impede envio automático
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // impede envio automático
 
-    if (form.checkValidity()) {
-      window.location.href = '/index.html'; // redireciona se estiver tudo ok
-    } else {
-      form.reportValidity(); // mostra os erros se existirem
-    }
-  });
+        if (form.checkValidity()) {
+            window.location.href = '/index.html'; // redireciona se estiver tudo ok
+        } else {
+            form.reportValidity(); // mostra os erros se existirem
+        }
+    });
 </script>

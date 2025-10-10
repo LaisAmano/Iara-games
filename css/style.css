@@ -34,3 +34,8 @@ p {
     --color-green-br: #4FC67A;
     --color-text: #FAFAFA;
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
