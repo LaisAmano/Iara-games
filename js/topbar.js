@@ -14,9 +14,6 @@ function topbar() {
         </div>
     </section>
 
-
-
-
     <section class="vs-mobile">
         <div class="header-secundario">
             <form class="barra-de-busca" action="#" method="get">

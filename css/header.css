@@ -240,13 +240,10 @@
     .btn-hamburger {
         display: block;
         position: fixed;
-        top: 1.5rem;
-        left: 1.75rem;
         z-index: 1001;
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0.5rem;
     }
 
     .linha {
@@ -376,13 +373,13 @@
     }
 
     .header-secundario {
+        display: flex;
+        align-items: center;
         width: 80%;
-        margin-left: 20%;
     }
 
     .barra-de-busca {
         width: 80%;
-        height: 2rem;
     }
 
     .espaco-pesquisar {
