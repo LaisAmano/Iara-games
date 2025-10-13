@@ -41,6 +41,8 @@ p {
   text-align: center;
 }
 
+
+
 .item img {
   height: 345px;
   border: 2px solid;
@@ -120,3 +122,35 @@ p {
   cursor: not-allowed;
   opacity: 0.4;
 }
+
+
+@media screen and (max-width: 768px) {
+
+.container {
+    gap: 15px;
+    flex-direction: column; 
+    
+  }
+
+.h2-titulo-conteiner {
+  font-size: 20px;
+}
+
+.item img {
+  max-height: 250px;
+  max-width: 100%;
+  flex-direction: column;   
+  }
+
+.img1 {
+  width: 100%;
+}
+
+.img2 {
+  width: 80%;
+}
+
+
+}
+
+
