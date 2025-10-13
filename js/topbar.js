@@ -32,5 +32,6 @@ function topbar() {
 
     document.querySelector(".corpo-da-pagina")
         .insertAdjacentHTML("afterbegin", header);
+
 }
 topbar();

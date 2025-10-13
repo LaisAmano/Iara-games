@@ -188,13 +188,24 @@
 
     .vs-mobile {
         display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        position: ;
-        background-color: #111;
+        z-index: 999;
+        background-color: #111; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .btn-hamburger {
         display: none;
+        position: fixed;
+        left: 1.75rem;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
     }
 
     /* conteúdo principal ocupa toda a largura quando menu escondido */
