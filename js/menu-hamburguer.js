@@ -7,3 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.style.display = isVisible ? "none" : "flex";
     });
 });
+
+const btnHamburger = document.querySelector('.btn-hamburger');
+if (btnHamburger) {
+    document.body.appendChild(btnHamburger);
+}
