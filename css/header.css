@@ -1,4 +1,3 @@
-/* sidebar wrapper */
 .border-wrapper {
     position: fixed;
     top: 0;
@@ -6,12 +5,9 @@
     height: 100%;
     z-index: 0;
     width: 250px;
-    /* largura fixa da sidebar em desktop */
     background: #111;
-    /* cor de fundo provisória */
 }
 
-/* dentro da sidebar */
 .border-wrapper header {
     position: relative;
     width: 100%;
@@ -91,14 +87,11 @@
     text-decoration: none;
 }
 
-/* contêiner principal ao lado da sidebar */
 .conteudo-principal {
     margin-left: 250px;
-    /* deixa espaço para sidebar */
     padding: 1rem;
 }
 
-/* top bar / header secundário dentro do conteúdo */
 .header-secundario {
     display: flex;
     align-items: center;
@@ -142,7 +135,6 @@
 
 .botao-pesquisar {
     position: relative;
-    /* agora relativa, não absoluta */
     margin: 0;
     background-color: #007BFF;
     border: none;
@@ -176,11 +168,6 @@
     filter: invert(1);
 }
 
-/* =========================== */
-/* media queries para responsividade */
-/* =========================== */
-
-/* até tablets / médio */
 @media (max-width: 1920px) {
     .vs-desktop {
         display: inline;
@@ -208,7 +195,6 @@
         padding: 0.5rem;
     }
 
-    /* conteúdo principal ocupa toda a largura quando menu escondido */
     .conteudo-principal {
         margin-left: 0 !important;
     }
@@ -226,7 +212,6 @@
     }
 }
 
-/* mobile — até 768px */
 @media (max-width: 768px) {
     .vs-desktop {
         display: none;
@@ -314,7 +299,6 @@
     }
 }
 
-/* mobile pequeno — até 480px */
 @media (max-width: 480px) {
     .btn-hamburger {
         display: block;
