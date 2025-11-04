@@ -1,3 +1,11 @@
+/* ============================ */
+/* Estilos gerais da homepage */
+/* ============================ */
+
+.main-homepage {
+    background-color: var(--color-bg);
+}
+
 .corpo-da-pagina {
     width: 80%;
     margin-left: 16%;
@@ -22,22 +30,7 @@
 
 .p-home {
     color: var(--color-text);
-    margin-bottom: 10px;
-}
-
-/* ============================= */
-
-/* swiper banner ---------------------------------- */
-.swiper {
-    width: 100%;
-    height: 25rem;
-}
-
-.swiper-slide {
-    display: flex !important;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0 5%;
+    font-size: 20px !important;
 }
 
 .imagem-1,
@@ -91,34 +84,27 @@
     z-index: 2;
 }
 
-.coluna-direita {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
 .banner-info {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
     z-index: 3;
     color: #fff;
-    max-width: 80%;
 }
 
 .banner-title {
     text-transform: uppercase;
+    font-size: 30px;
 }
 
 .banner-desc {
-    margin-bottom: 10px;
     color: #fafafa;
+    font-size: 16px;
 }
 
 .banner-btn {
-    background: rgba(79, 126, 246, 1);
-    color: #fff;
+    background: #fff;
+    color: var(--color-bg);
     border: none;
     border-radius: 5px;
     padding: 0.4rem 0.8rem;
@@ -129,129 +115,98 @@
     text-decoration: none;
 }
 
-.banner-btn:hover {
-    background: rgba(50, 100, 220, 1);
+.carousel-slide-content {
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .carousel-slide-content {
+        height: auto;
+    }
 }
 
 /* ============================= */
-
 /* Cards categorias */
+/* ============================= */
+
 .img-card {
     width: 100%;
     height: auto;
-    transform: rotate(0deg);
-    opacity: 1;
     border-radius: 0.625rem;
-    border-width: 0.125rem;
     position: absolute;
-    z-index: 1
+    z-index: 1;
+    object-fit: contain;
 }
 
 .section-game-cards {
-    max-width: 98%;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
 }
 
-.game-card1 {
-    width: 25rem;
-    height: 15.4rem;
-    overflow: hidden;
-    position: relative;
-    border-radius: 0.625rem;
-    border-width: 0.125rem;
-    border: 2px solid var(--color-blue-sky, rgba(79, 126, 246, 1));
-}
-
-.game-card2 {
-    width: 25rem;
-    height: 15.4rem;
-    overflow: hidden;
-    position: relative;
-    border-radius: 0.625rem;
-    border-width: 0.125rem;
-    border: 2px solid var(----color-yellow-br, rgba(253, 231, 96, 1))
-}
-
+.game-card1,
+.game-card2,
 .game-card3 {
     width: 25rem;
     height: 15.4rem;
     overflow: hidden;
     position: relative;
     border-radius: 0.625rem;
-    border-width: 0.125rem;
-    border: 2px solid var(----color-green-br, rgba(79, 198, 122, 1))
+    border: 2px solid;
 }
 
-.sombra {
-    display: block;
-    width: 25rem;
-    height: 15.4rem;
-    border-radius: 0.625rem;
-    border-width: 0.125rem;
-    background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    z-index: 2;
-    position: absolute;
+.game-card1 {
+    border-color: var(--color-blue-sky, rgba(79, 126, 246, 1));
 }
 
-.sombra2 {
-    display: block;
-    width: 25rem;
-    height: 15.4rem;
-    border-radius: 0.625rem;
-    border-width: 0.125rem;
-    background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    z-index: 2;
-    position: relative;
+.game-card2 {
+    border-color: var(--color-yellow-br, rgba(253, 231, 96, 1));
 }
 
+.game-card3 {
+    border-color: var(--color-green-br, rgba(79, 198, 122, 1));
+}
+
+.sombra,
+.sombra2,
 .sombra3 {
     display: block;
     width: 25rem;
     height: 15.4rem;
     border-radius: 0.625rem;
-    border-width: 0.125rem;
     background: linear-gradient(200deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     z-index: 2;
     position: relative;
 }
 
-.titulo-lista-jogos1 {
+.sombra {
     position: absolute;
-    z-index: 3;
-    font-size: 1.1rem;
-    color: rgba(79, 126, 246, 1);
-    text-align: center;
-    font-family: Poppins, sans-serif;
-    font-weight: 700;
-    line-height: 120%;
-    margin-top: 13rem;
-    margin-left: 1rem;
 }
 
-.titulo-lista-jogos2 {
-    position: absolute;
-    z-index: 3;
-    font-size: 1.1rem;
-    color: rgba(253, 231, 96, 1);
-    text-align: center;
-    font-family: Poppins, sans-serif;
-    font-weight: 700;
-    line-height: 120%;
-    margin-top: 13rem;
-    margin-left: 1rem;
-}
-
+.titulo-lista-jogos1,
+.titulo-lista-jogos2,
 .titulo-lista-jogos3 {
     position: absolute;
     z-index: 3;
-    color: rgba(79, 198, 122, 1);
+    font-size: 1.1rem;
     text-align: center;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    line-height: 120%;
     margin-top: 13rem;
     margin-left: 1rem;
+}
+
+.titulo-lista-jogos1 {
+    color: rgba(79, 126, 246, 1);
+}
+
+.titulo-lista-jogos2 {
+    color: rgba(253, 231, 96, 1);
+}
+
+.titulo-lista-jogos3 {
+    color: rgba(79, 198, 122, 1);
 }
 
 .swiper-button-next,
@@ -264,13 +219,14 @@
     backdrop-filter: none;
 }
 
-/* =============== */
+/* ============================= */
+/* Cards jogos */
+/* ============================= */
 
-/* cards jogos --------------------------------*/
 .games-list {
     list-style: none;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     gap: 1.25rem;
     margin: 0 auto;
     padding: 0;
@@ -336,23 +292,23 @@
 }
 
 .game-btn {
-    background: #4F7EF6;
-    color: #fff;
+    background: #fff;
+    color: var(--color-bg);
     border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background 0.2s ease;
+    font-family: poppins, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
-.game-btn:hover {
-    background: #3264dc;
-}
+/* ============================= */
+/* Responsividade */
+/* ============================= */
 
 @media (max-width: 992px) {
-
     .corpo-da-pagina {
         width: 100%;
     }
@@ -364,7 +320,6 @@
 }
 
 @media (max-width: 768px) {
-    
     .corpo-da-pagina {
         width: 100%;
         margin: 0;
@@ -379,10 +334,6 @@
 
     .destaque-amarelo {
         font-size: 20px;
-    }
-
-    .banner-info {
-        display: none;
     }
 
     .swiper-slide {
@@ -410,4 +361,37 @@
     .game-card3 {
         width: 100%;
     }
+
+    .carousel-item>.container>.d-flex {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+}
+
+#carouselJogos .carousel-control-prev,
+#carouselJogos .carousel-control-next {
+    z-index: 4;
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(40, 167, 69, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carouselJogos .carousel-control-prev {
+    left: 1rem;
+}
+
+#carouselJogos .carousel-control-next {
+    right: 1rem;
+}
+
+#carouselJogos .carousel-control-prev-icon,
+#carouselJogos .carousel-control-next-icon {
+    filter: invert(1);
 }

@@ -8,8 +8,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #161618;
     color: #ffffff;
+    background-color: var(--color-bg);
     line-height: 1.5;
 }
 
