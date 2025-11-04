@@ -88,8 +88,8 @@ input::placeholder {
     margin-top: 10px;
     width: 100%; 
     padding: 12px;
-    background-color: var(--color-blue-sky);
-    color: #fff;
+    background-color: white;
+    color: var(--color-bg);
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
@@ -97,10 +97,6 @@ input::placeholder {
     border: none;
     font-size: 16px;
     font-family: Montserrat, sans-serif; 
-}
-
-.btn:hover {
-    background-color: #3d47e0;
 }
 
 .texto-nao-tem-login{
