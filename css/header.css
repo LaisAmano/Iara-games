@@ -34,10 +34,6 @@
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
-    mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    mask-composite: exclude;
     background-clip: border-box;
     pointer-events: none;
 }
@@ -62,12 +58,12 @@
 }
 
 .lista-sidebar {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
 }
+
 
 .lista-header {
     display: flex;
@@ -82,7 +78,8 @@
     margin-right: 0.5rem;
 }
 
-.lista-header a {
+.lista-header a,
+.lista-header .nav-link {
     color: #fff;
     text-decoration: none;
 }
@@ -93,11 +90,14 @@
 }
 
 .header-secundario {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0.5rem 0;
+    gap: 0.4rem;
+    margin-left: 18%;
 }
 
 .barra-de-busca {
@@ -168,6 +168,9 @@
     filter: invert(1);
 }
 
+/* --- REMOVIDO: btn-hamburger, linha, #sidebar (não usados mais) --- */
+
+/* Responsividade */
 @media (max-width: 1920px) {
     .vs-desktop {
         display: inline;
@@ -179,32 +182,21 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 999;
-        background-color: #111; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1040 !important;
+        background-color: #111;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .btn-hamburger {
+    .btn.btn-dark.fixed-top {
         display: none;
-        position: fixed;
-        left: 1.75rem;
-        z-index: 1001;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-
-    .conteudo-principal {
-        margin-left: 0 !important;
-    }
-
-    .border-wrapper {
-        width: 220px;
     }
 
     .conteudo-principal {
         margin-left: 220px;
+    }
+
+    .border-wrapper {
+        width: 220px;
     }
 
     .barra-de-busca {
@@ -213,6 +205,10 @@
 }
 
 @media (max-width: 768px) {
+    .corpo-da-pagina {
+        margin-top: 2rem;
+    }
+
     .vs-desktop {
         display: none;
     }
@@ -222,38 +218,40 @@
         width: 100%;
     }
 
-    .btn-hamburger {
-        display: block;
-        position: fixed;
-        z-index: 1001;
+
+    .offcanvas.offcanvas-start.show,
+    .offcanvas.offcanvas-start.showing {
+        width: 56%;
+        margin-top: 10%;
+        padding-top: 5%;
+        background-color: #30353a;
+        font-size: 1rem;
+        color: white;
+    }
+
+    .btn.btn-dark.fixed-top,
+    .btn.btn-dark.fixed-top.showing {
         background: transparent;
+        display: block;
+        width: 4px;
+    }
+
+    .navbar-toggler-icon {
+        display: block !important;
+        height: 4px !important;
+        background-color: white;
+        margin-top: 0.2rem !important;
+    }
+
+    button[data-bs-toggle="offcanvas"] {
+        position: fixed !important;
+        z-index: 9999 !important;
         border: none;
         cursor: pointer;
+        padding: 0;
     }
 
-    .linha {
-        display: block;
-        width: 1.5rem;
-        height: 0.2rem;
-        background-color: #fff;
-        margin: 0.3rem 0;
-        transition: transform 0.3s, opacity 0.3s;
-    }
-
-    #sidebar {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 70%;
-        max-width: 300px;
-        background: #111;
-        z-index: 1000;
-        transition: transform 0.3s ease;
-    }
-
-    .logotipo{
+    .logotipo {
         margin-top: 3rem;
         padding: 0;
     }
@@ -265,6 +263,7 @@
     .logotipo-header {
         width: 2.5rem;
     }
+
     .border-wrapper {
         position: relative;
         width: 100%;
@@ -275,109 +274,31 @@
         margin-left: 0;
     }
 
-    .header-secundario {
-        align-items: stretch;
-        justify-content: center;
-        width: 90%;
-        margin-left: 10%;
-        gap: 1.rem;
-    }
-
     .barra-de-busca {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
-    }
-
-    .botao-pesquisar {
-        width: 100%;
-        max-width: 200px;
-        align-self: center;
-    }
-
-    .user-link {
-        justify-content: center;
+        overflow: hidden;
     }
 }
 
 @media (max-width: 480px) {
-    .btn-hamburger {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1001;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-
-    .linha {
-        display: block;
-        width: 1.5rem;
-        height: 0.2rem;
-        background-color: #fff;
-        margin: 0.3rem 0;
-        transition: transform 0.3s, opacity 0.3s;
-    }
-
-    #sidebar {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 70%;
-        max-width: 300px;
-        background: #111;
-        z-index: 1000;
-        transition: transform 0.3s ease;
-    }
-
-
-    .logotipo{
-        margin-top: 3rem;
-        padding: 0;
-    }
-
-    .logotipo-header-titulo {
-        font-size: 1rem;
-    }
-
-    .logotipo-header {
-        width: 2.5rem;
-    }
-
     .vs-desktop {
         display: none;
     }
 
     .vs-mobile {
         display: inline;
+        background-color: black;
+        width: 100%;
+        height: 8%;
     }
 
-    .header-secundario {
-        display: flex;
-        align-items: center;
-        width: 80%;
+    .logotipo-header {
+        width: 2.5rem;
     }
 
-    .barra-de-busca {
-        width: 80%;
-    }
-
-    .espaco-pesquisar {
-        font-size: 0.85rem;
-    }
-
-    .icone-lupa {
-        width: 1.2rem;
-        margin-left: 0.2rem;
-    }
-
-    .botao-pesquisar {
-        max-width: 160px;
-        font-size: 0.9rem;
+    .logotipo-header-titulo {
+        font-size: 1rem;
     }
 
     .user-nome {
