@@ -8,7 +8,7 @@ function topbar() {
             </form>
 
             <a href="./login.html" class="user-link">
-            <span class="user-nome" style="padding:0.5%">Login/\Cadastro</span>
+            <span class="user-nome">Login/Cadastro</span>
             <img class="user-icon" src="./img/user-icon.png" alt="foto de perfil do usuario">
             </a>
         </div>

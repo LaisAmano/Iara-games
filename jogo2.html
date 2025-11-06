@@ -16,63 +16,74 @@
     <script src="./js/sidebar.js" defer></script>
     <script src="./js/menu-hamburguer.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
-<script>
-    sidebar();
-</script>
+<body>
+    <main>
+        <script>
+            sidebar();
+        </script>
 
-<section class="corpo-da-pagina">
-    <script>
-        topbar();
-    </script>
+        <section class="corpo-da-pagina">
+            <script>
+                topbar();
+            </script>
 
-    <div class="container">
-        <div class="item">
-            <h2>Impunes</h2>
-            <img src="./img/Capa_Impunes.png" alt="Impunes" class="img1">
-        </div>
+            <div class="d-flex flex-column flex-md-row gap-5 mt-4">
+                <div class="item">
+                    <h2>Impunes</h2>
+                    <img src="./img/Capa_Impunes.png" alt="Impunes" class="img1">
+                </div>
 
-        <div class="item">
-            <h2>Desenvolvedores</h2>
-            <img src="./img/Desenvolvedores_Impunes.jpg" alt="Desenvolvedores 2Nibble Studios" class="img2">
-        </div>
-    </div>
+                <div class="item">
+                    <h2>Desenvolvedores</h2>
+                    <img src="./img/Desenvolvedores_Impunes.jpg" alt="Desenvolvedores 2Nibble Studios" class="img2">
+                </div>
+            </div>
 
-    <section class="sobre-jogo">
-        <h3>sobre</h3>
-        <p>Impunes é um jogo brasileiro de ação e aventura em mundo aberto, com fortes influências da série Grand Theft
-            Auto. Desenvolvido em território nacional, o título se passa na cidade fictícia de Canário, fortemente
-            inspirada em Balneário Camboriú (SC), combinando paisagens litorâneas urbanas com elementos de
-            criminalidade, corrupção e liberdade de escolha.
-            <br><br>
-            O jogador é colocado em um ambiente dinâmico e expansivo, onde pode explorar livremente, interagir com NPCs,
-            personalizar veículos e personagens, e traçar sua própria trajetória — seja por meio do crime organizado,
-            seja por um caminho mais legal e ético, oferecendo múltiplas possibilidades narrativas e de gameplay.
-            <br><br>
-            Combinando elementos de ação, aventura e simulação urbana, Impunes busca representar o cotidiano de uma
-            cidade brasileira com identidade visual própria, gírias locais e ambientação realista, ao mesmo tempo em que
-            entrega mecânicas clássicas do gênero de mundo aberto, como confrontos armados, perseguições e missões
-            não-lineares.
-        </p>
-    </section>
+            <section class="sobre-jogo">
+                <h3>sobre</h3>
+                <p>Impunes é um jogo brasileiro de ação e aventura em mundo aberto, com fortes influências da série
+                    Grand Theft
+                    Auto. Desenvolvido em território nacional, o título se passa na cidade fictícia de Canário,
+                    fortemente
+                    inspirada em Balneário Camboriú (SC), combinando paisagens litorâneas urbanas com elementos de
+                    criminalidade, corrupção e liberdade de escolha.
+                    <br><br>
+                    O jogador é colocado em um ambiente dinâmico e expansivo, onde pode explorar livremente, interagir
+                    com NPCs,
+                    personalizar veículos e personagens, e traçar sua própria trajetória — seja por meio do crime
+                    organizado,
+                    seja por um caminho mais legal e ético, oferecendo múltiplas possibilidades narrativas e de
+                    gameplay.
+                    <br><br>
+                    Combinando elementos de ação, aventura e simulação urbana, Impunes busca representar o cotidiano de
+                    uma
+                    cidade brasileira com identidade visual própria, gírias locais e ambientação realista, ao mesmo
+                    tempo em que
+                    entrega mecânicas clássicas do gênero de mundo aberto, como confrontos armados, perseguições e
+                    missões
+                    não-lineares.
+                </p>
+            </section>
 
-    <section class="corpo-galeria" id="galeria-container" data-galeria="impunes">
-        <h2 id="galeria-titulo">Galeria:</h2>
+            <section class="corpo-galeria" id="galeria-container" data-galeria="impunes">
+                <h2 id="galeria-titulo">Galeria:</h2>
 
-        <div class="galeria-navegacao" id="galeria-navegacao">
-            <button id="btn-prev" aria-label="Imagem anterior">
-                <i class="fas fa-chevron-left"></i>
-            </button>
+                <div class="galeria-navegacao" id="galeria-navegacao">
+                    <button id="btn-prev" aria-label="Imagem anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
 
-            <div class="galeria-grid" id="galeria"></div>
+                    <div class="galeria-grid" id="galeria"></div>
 
-            <button id="btn-next" aria-label="Próxima imagem">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
-</section>
+                    <button id="btn-next" aria-label="Próxima imagem">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+        </section>
+    </main>
 </body>
-
-</html>

@@ -10,7 +10,7 @@
 
 .border-wrapper header {
     position: relative;
-    width: 100%;
+    width: 320px;
     height: 100%;
     padding: 2rem;
     color: #fff;
@@ -85,7 +85,7 @@
 }
 
 .conteudo-principal {
-    margin-left: 250px;
+    margin-left: 320px;
     padding: 1rem;
 }
 
@@ -192,11 +192,11 @@
     }
 
     .conteudo-principal {
-        margin-left: 220px;
+        margin-left: 320px;
     }
 
     .border-wrapper {
-        width: 220px;
+        width: 320px;
     }
 
     .barra-de-busca {
@@ -309,4 +309,29 @@
         width: 1.5rem;
         height: 1.5rem;
     }
+}
+
+.offcanvas-body,
+.offcanvas-header {
+    background-color: var(--color-bg);
+}
+
+.offcanvas-body {
+    border-bottom-right-radius: 10px;
+}
+
+.border-wrapper a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.border-wrapper a:hover {
+    color: #FDE760;
+    text-decoration: none;
+}
+
+.user-nome {
+    color: #fff;
 }

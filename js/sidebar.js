@@ -13,25 +13,18 @@ function sidebar() {
                     <ul class="lista-sidebar">
                         <li class="lista-header">
                             <img class="icone-header" src="./img/home-icon.svg" alt="icone da página inicial">
-                            <a href="/">Home</a>
+                            <a class="fs-5 text-uppercase" href="/">Home</a>
                         </li>
                         <li class="lista-header">
                             <img src="/img/icone-header.svg" alt="" class="icone-header">
-                            <a href="#">Biblioteca</a>
-                        </li>
-                        <li class="lista-header">
-                            <img class="icone-header" src="./img/categorias-icon.svg" alt="icone das categorias">
-                            <a href="#">Categorias</a>
+                            <a class="fs-5 text-uppercase" href="./meus-jogos.html">Meus jogos</a>
+                        </li>                      
                         </li>
                     </ul>
                 </nav>
             </header>
         </div>
     </section>
-
-
-
-
 
     <section class="vs-mobile d-lg-none">
         
@@ -56,15 +49,11 @@ function sidebar() {
                     <ul class="lista-sidebar nav flex-column">
                         <li class="lista-header nav-item">
                             <img class="icone-header" src="./img/home-icon.svg" alt="icone da página inicial">
-                            <a class="nav-link" href="/">Home</a>
-                        </li>
-                        <li class="lista-header nav-item">
-                            <img src="/img/icone-header.svg" alt="" class="icone-header">
-                            <a class="nav-link" href="#">Biblioteca</a>
+                            <a class="fs-6 text-uppercase" href="/">Home</a>
                         </li>
                         <li class="lista-header nav-item">
                             <img class="icone-header" src="./img/categorias-icon.svg" alt="icone das categorias">
-                            <a class="nav-link" href="#">Categorias</a>
+                            <a class="fs-6 text-uppercase" href="#">Meus jogos</a>
                         </li>
                     </ul>
                 </nav>

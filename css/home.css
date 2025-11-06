@@ -115,6 +115,10 @@
     text-decoration: none;
 }
 
+.banner-btn:hover {
+    background-color: #e0e0e0;
+}
+
 .carousel-slide-content {
     height: 400px;
 }
@@ -304,6 +308,10 @@
     text-decoration: none;
 }
 
+.game-btn:hover {
+    background-color: #e0e0e0;
+}
+
 /* ============================= */
 /* Responsividade */
 /* ============================= */
@@ -389,9 +397,4 @@
 
 #carouselJogos .carousel-control-next {
     right: 1rem;
-}
-
-#carouselJogos .carousel-control-prev-icon,
-#carouselJogos .carousel-control-next-icon {
-    filter: invert(1);
 }
