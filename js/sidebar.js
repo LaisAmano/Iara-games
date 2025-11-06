@@ -53,7 +53,7 @@ function sidebar() {
                         </li>
                         <li class="lista-header nav-item">
                             <img class="icone-header" src="./img/categorias-icon.svg" alt="icone das categorias">
-                            <a class="fs-6 text-uppercase" href="#">Meus jogos</a>
+                            <a class="fs-6 text-uppercase" href="./meus-jogos.html">Meus jogos</a>
                         </li>
                     </ul>
                 </nav>
