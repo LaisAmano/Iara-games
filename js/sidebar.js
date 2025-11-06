@@ -36,7 +36,9 @@ function sidebar() {
     <section class="vs-mobile d-lg-none">
         
         <button class="btn btn-dark fixed-top m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
-            <span class="navbar-toggler-icon"></span>
+            <div class="navbar-toggler-icon"></div>
+            <div class="navbar-toggler-icon"></div>
+            <div class="navbar-toggler-icon"></div>
         </button>
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
