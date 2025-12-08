@@ -13,7 +13,7 @@ function sidebar() {
                     <ul class="lista-sidebar">
                         <li class="lista-header">
                             <img class="icone-header" src="./img/home-icon.svg" alt="icone da página inicial">
-                            <a class="fs-5 text-uppercase" href="/">Home</a>
+                            <a class="fs-5 text-uppercase" href="./index.html">Home</a>
                         </li>
                         <li class="lista-header">
                             <img src="/img/icone-header.svg" alt="" class="icone-header">
@@ -49,7 +49,7 @@ function sidebar() {
                     <ul class="lista-sidebar nav flex-column">
                         <li class="lista-header nav-item">
                             <img class="icone-header" src="./img/home-icon.svg" alt="icone da página inicial">
-                            <a class="fs-6 text-uppercase" href="/">Home</a>
+                            <a class="fs-6 text-uppercase" href="./index.html">Home</a>
                         </li>
                         <li class="lista-header nav-item">
                             <img class="icone-header" src="./img/categorias-icon.svg" alt="icone das categorias">

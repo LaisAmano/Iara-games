@@ -10,7 +10,7 @@ p {
 }
 
 main {
-  background-color: #111;
+  background-color: var(--color-bg);
   color: #fff;
 }
 
