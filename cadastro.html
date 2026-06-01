@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -33,6 +37,8 @@
                     <label for="senha">SENHA</label>
                     <input type="password" id="senha" placeholder="DIGITE SUA SENHA" required />
 
+                    <div id="root-cep"></div>
+
                     <button type="submit" class="btn">CONTINUAR</button>
                 </form>
             </div>
@@ -52,4 +58,110 @@
       form.reportValidity(); 
     }
   });
+</script>
+
+<script type="text/babel">
+  const { useState } = React;
+
+  function CepForm() {
+    const [cep, setCep] = useState("");
+    const [endereco, setEndereco] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [erro, setErro] = useState("");
+
+    function handleCepChange(e) {
+      let valor = e.target.value.replace(/\D/g, "");
+      if (valor.length > 5) valor = valor.slice(0, 5) + "-" + valor.slice(5, 8);
+      setCep(valor);
+      setErro("");
+      setEndereco(null);
+    }
+
+    async function buscarCep() {
+      const cepLimpo = cep.replace(/\D/g, "");
+      if (cepLimpo.length !== 8) {
+        setErro("Digite um CEP válido com 8 dígitos.");
+        return;
+      }
+      setLoading(true);
+      setErro("");
+      setEndereco(null);
+      try {
+        const res = await fetch(`https://viacep.com.br/ws/${cepLimpo}/json/`);
+        const data = await res.json();
+        if (data.erro) {
+          setErro("CEP não encontrado. Verifique e tente novamente.");
+        } else {
+          setEndereco(data);
+        }
+      } catch {
+        setErro("Erro de conexão. Tente novamente.");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    return (
+      <div style={{marginBottom: "1rem"}}>
+        <label style={{display:"block", marginBottom:"0.4rem"}}>CEP</label>
+        <div style={{display:"flex", gap:"0.5rem"}}>
+          <input
+            type="text"
+            placeholder="00000-000"
+            value={cep}
+            onChange={handleCepChange}
+            maxLength={9}
+            style={{flex:1, padding:"0.6rem", borderRadius:"6px", border:"1px solid #fff", background:"#171718", color:"#fff"}}
+          />
+          <button
+            type="button"
+            onClick={buscarCep}
+            disabled={loading}
+            style={{padding:"0.6rem 1rem", background:"#fff", color:"#171718", border:"none", borderRadius:"6px", cursor:"pointer", height: "2.5rem"}}
+          >
+            {loading ? "..." : "Buscar"}
+          </button>
+        </div>
+
+        {erro && <p style={{color:"#f87171", fontSize:"0.85rem", marginTop:"0.4rem"}}>{erro}</p>}
+
+        {endereco && (
+          <div style={{marginTop:"1rem", display:"flex", flexDirection:"column", gap:"0.6rem"}}>
+            <div>
+              <label style={{display:"block", fontSize:"0.75rem", color:"#a855f7"}}>Logradouro</label>
+              <input readOnly value={endereco.logradouro || "—"}
+                style={{width:"100%", padding:"0.6rem", borderRadius:"6px", border:"1px solid #333", background:"#0f0f23", color:"#ccc", boxSizing:"border-box"}} />
+            </div>
+            <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:"0.6rem"}}>
+              <div>
+                <label style={{display:"block", fontSize:"0.75rem", color:"#a855f7"}}>Bairro</label>
+                <input readOnly value={endereco.bairro || "—"}
+                  style={{width:"100%", padding:"0.6rem", borderRadius:"6px", border:"1px solid #333", background:"#0f0f23", color:"#ccc", boxSizing:"border-box"}} />
+              </div>
+              <div>
+                <label style={{display:"block", fontSize:"0.75rem", color:"#a855f7"}}>Cidade</label>
+                <input readOnly value={endereco.localidade}
+                  style={{width:"100%", padding:"0.6rem", borderRadius:"6px", border:"1px solid #333", background:"#0f0f23", color:"#ccc", boxSizing:"border-box"}} />
+              </div>
+            </div>
+            <div style={{display:"grid", gridTemplateColumns:"1fr 1fr", gap:"0.6rem"}}>
+              <div>
+                <label style={{display:"block", fontSize:"0.75rem", color:"#a855f7"}}>Estado</label>
+                <input readOnly value={endereco.uf}
+                  style={{width:"100%", padding:"0.6rem", borderRadius:"6px", border:"1px solid #333", background:"#0f0f23", color:"#ccc", boxSizing:"border-box"}} />
+              </div>
+              <div>
+                <label style={{display:"block", fontSize:"0.75rem", color:"#a855f7"}}>DDD</label>
+                <input readOnly value={endereco.ddd}
+                  style={{width:"100%", padding:"0.6rem", borderRadius:"6px", border:"1px solid #333", background:"#0f0f23", color:"#ccc", boxSizing:"border-box"}} />
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  const root = ReactDOM.createRoot(document.getElementById("root-cep"));
+  root.render(<CepForm />);
 </script>
